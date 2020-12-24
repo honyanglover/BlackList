@@ -98,11 +98,11 @@ body.mobile .header-nav-area {
 }
 
 .header-nav-area li a:not(.active):not(:hover):not(:active) {
-  color: white;
+  color: #acacac;
 }
 
 .header-nav-area li a.active, .header-nav-area li a:hover, .header-nav-area li a:active {
-  color: #ff7700;
+  color: white;
 }
 
 .header-profile-area {
@@ -120,7 +120,6 @@ body.mobile .header-nav-area {
   border: none;
   background-color: white;
   font-size: 16px;
-  font-weight: bold;
   transition: filter 0.2s, transform 0.2s;
 }
 

@@ -11,7 +11,18 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+}
+
+main {
+  height: 0px;
+  flex: 1 1 0px;
+}
+
+footer {
+  flex: none;
 }
 
 ul,
@@ -66,6 +77,10 @@ header h1 {
   user-select: none;
 }
 
+main {
+  padding-top: 60px;
+}
+
 body:not(.mobile) header > *:not(h1) {
   padding-left: 32px;
 }
@@ -116,7 +131,7 @@ body.mobile .header-nav-area {
   margin-top: auto;
   margin-bottom: auto;
   padding: 0 16px;
-  border-radius: 5px;
+  border-radius: 16px;
   border: none;
   background-color: white;
   font-size: 16px;
@@ -130,4 +145,51 @@ body.mobile .header-nav-area {
 
 #btnSignIn:active {
   transform: scale(0.95);
+}
+
+#wrap {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 200px 40px;
+}
+
+#searchbar {
+  width: 100%;
+  max-width: 600px;
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 15px 30px;
+  border-radius: 31px;
+  border: 1px solid #d3d3d3;
+}
+
+#searchbar.focused {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#searchbar input {
+  width: 0px;
+  flex: 1 1 0px;
+  padding: 0;
+  border: none;
+  font-size: 18px;
+}
+
+#searchbar input::placeholder {
+  opacity: 0.5;
+}
+
+#searchbar button {
+  width: 30px;
+  flex: none;
+  margin-left: 8px;
+  padding: 0;
+  border-radius: 15px;
+  border: none;
+  background: gray;
 }

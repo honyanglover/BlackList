@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  color: #505050;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #1d2730;
+}
+
+header > * {
+  flex: none;
+}
+
+header h1 {
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
+  color: white;
+  user-select: none;
+}
+
+body:not(.mobile) header > *:not(h1) {
+  padding-left: 32px;
+}
+
+body:not(.mobile) #btnHamburger {
+  display: none;
+}
+
+body.mobile .header-nav-area {
+  display: none;
+}
+
+.header-nav-area {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.header-nav-area li:not(:first-child) {
+  margin-left: 16px;
+}
+
+.header-nav-area li a {
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.header-nav-area li a:not(.active):not(:hover):not(:active) {
+  color: #acacac;
+}
+
+.header-nav-area li a.active, .header-nav-area li a:hover, .header-nav-area li a:active {
+  color: white;
+}
+
+.header-profile-area {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+#btnSignIn {
+  height: 32px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+#btnSignIn:hover,
+#btnSignIn:active {
+  filter: brightness(0.8);
+}
+
+#btnSignIn:active {
+  transform: scale(0.95);
+}

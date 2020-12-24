@@ -1,0 +1,121 @@
+
+
+header {
+    $header-height: 60px;
+    $header-vertical-padding: 10px;
+    $header-inner-height: $header-height - $header-vertical-padding * 2;
+    $header-font-size: 16px;
+
+    height: $header-height;
+
+    display: flex;
+    flex-direction: row;
+    padding: $header-vertical-padding 40px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: $background-color-dark;
+
+    & > * {
+        flex: none;
+    }
+
+    h1 {
+        height: $header-inner-height;
+
+        margin: 0;
+
+        line-height: $header-inner-height;
+        color: white;
+        user-select: none;
+    }
+
+    @at-root {
+        body:not(.mobile) {
+            header > *:not(h1) {
+                padding-left: 32px;
+            }
+
+            #btnHamburger {
+                display: none;
+            }
+        }
+
+        body.mobile {
+            .header-nav-area {
+                display: none;
+            }
+        }
+
+        .header-nav-area {
+            height: $header-inner-height;
+
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+
+            li {
+                &:not(:first-child) {
+                    margin-left: 16px;
+                }
+
+                a {
+                    height: $header-inner-height;
+
+                    font-size: $header-font-size;
+                    line-height: $header-inner-height;
+                    user-select: none;
+
+                    transition: color 0.2s;
+
+                    &:not(.active):not(:hover):not(:active) {
+                        color: #acacac;
+                    }
+
+                    &.active,
+                    &:hover,
+                    &:active {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .header-profile-area {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+        }
+
+        #btnSignIn {
+            height: 32px;
+
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0 16px;
+
+            border-radius: 5px;
+            border: none;
+            background-color: white;
+
+            font-size: $header-font-size;
+
+            transition: filter 0.2s, transform 0.2s;
+        }
+
+        #btnSignIn:hover,
+        #btnSignIn:active  {
+            filter: brightness(0.8);
+        }
+
+        #btnSignIn:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+
+

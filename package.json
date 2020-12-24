@@ -1,0 +1,21 @@
+{
+  "name": "blacklist",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "scss": "npm run scss:we",
+    "scss:e": "node-sass --output-style expanded ./public/scss --output ./public/css",
+    "scss:c": "node-sass --output-style compressed ./public/scss --output ./public/css",
+    "scss:we": "node-sass --watch --output-style expanded ./public/scss --output ./public/css",
+    "scss:wc": "node-sass --watch --output-style compressed ./public/scss --output ./public/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

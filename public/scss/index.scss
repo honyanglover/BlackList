@@ -4,10 +4,11 @@
 @import "common/_colors.scss";
 @import "common/_common.scss";
 @import "common/_header.scss";
+@import "common/_footer.scss";
 
 #wrap {
     width: 100%;
-    max-width: 900px;
+    max-width: 980px;
 
     display: flex;
     flex-direction: column;

@@ -147,9 +147,70 @@ body.mobile .header-nav-area {
   transform: scale(0.95);
 }
 
-#wrap {
+footer {
+  padding: 40px;
+  background-color: #eeeeee;
+}
+
+footer > div {
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;
+}
+
+footer > div > * {
+  display: flex;
+  flex-direction: row;
+}
+
+footer > div > *:not(:first-child) {
+  margin-top: 10px;
+}
+
+footer > div > * > p {
+  font-size: 13px;
+  color: #acacac;
+  line-height: 24px;
+}
+
+.footer-nav-area > li:not(:first-child) {
+  margin-left: 10px;
+}
+
+.footer-nav-area > li > a {
+  display: block;
+  font-size: 13px;
+  color: #acacac;
+  line-height: 24px;
+}
+
+.footer-nav-area > li > a:hover, .footer-nav-area > li > a:active {
+  text-decoration: underline;
+}
+
+#btnInstagram {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  transition: 0.5s;
+}
+
+#btnInstagram:not(:hover):not(:active) {
+  background-image: url(../images/icons/instagram-inactive.svg);
+}
+
+#btnInstagram:hover, #btnInstagram:active {
+  background-image: url(../images/icons/instagram-active.svg);
+}
+
+#wrap {
+  width: 100%;
+  max-width: 980px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
